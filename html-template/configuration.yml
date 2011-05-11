@@ -1,0 +1,83 @@
+nav:
+    - item:
+        destination:    [ "/", "/*" ]
+        label:          "Navigation"
+        view:           NavigationView
+    - item:
+        destination:    [ "/", "/*" ]
+        label:          "Background"
+        view:           BackgroundView
+    - item:
+        destination:    [ "home" ]
+        label:          "Home Section"
+        view:           HomeView
+    - item:
+        destination:    [ "media" ]
+        label:          "Media Section"
+        view:           MediaView
+    - item:
+        destination:    [ "news" ]
+        label:          "News Section"
+        view:           NewsView
+
+strings:
+    home_title:     "Home Section"
+    media_title:    "Media Section"
+    news_title:     "News Section"
+    welcome_msg:    "Welcome to the BirdBase demo, %s!"
+    
+# Some basic settings
+
+# turn debug on or off
+debug:              true
+
+# the asset base path
+base:               "assets/en_GB/"
+
+# the home page - the initial url to navigate to
+home_view:          "home"
+
+# this is the Actionscript package to help the framework find your view classes
+view_package:       org.birdbase.demo.view
+
+# Assets to load during bootstrap
+assets:
+    - item:
+        key:    "dynamic_library"
+        uri:    "assets.swf"
+    - item:
+        key:    "precious_children_1"
+        uri:    "images/581_large.jpg"
+    - item:
+        key:    "precious_children_2"
+        uri:    "images/584_large.jpg"
+    - item:
+        key:    "precious_children_3"
+        uri:    "images/588_large.jpg"
+    - item:
+       key:    "fonts"
+       uri:    "fontlibrary.swf"
+
+# Assets to load during mediator bootstrap and dynamically assign as properties in mediator
+view_assets:
+    background:
+        background: "images/563_large.jpg"
+    media:
+        media_picture_1:   "media/1_small.jpg"
+        media_picture_2:   "media/2_small.jpg"
+    news:
+        news_picture_1:   "news/6_small.jpg"
+        news_picture_2:   "news/7_small.jpg"
+
+# defining a menu navigation
+menu:
+    items:
+        - item:
+            destination:    "home"
+            label:          "home"
+        - item:
+            destination:    "media"
+            label:          "media"
+        - item:
+            destination:    "news"
+            label:          "news"
