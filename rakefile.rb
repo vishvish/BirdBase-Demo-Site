@@ -19,7 +19,7 @@ end
 def configure t
   copy_assets
   copy_html
-  t.library_path << 'libs'
+  t.library_path << 'lib'
   t.default_frame_rate = 31
   t.optimize = true
   t.target_player = '10.1'
