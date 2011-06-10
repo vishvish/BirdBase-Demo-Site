@@ -1,7 +1,7 @@
 package org.birdbase.demo.commands
 {
+	import com.epologee.navigator.INavigator;
 	import com.epologee.navigator.integration.robotlegs.mapping.*;
-	import com.epologee.navigator.integration.swfaddress.SWFAddressNavigator;
 	
 	import org.birdbase.demo.view.*;
 	import org.birdbase.framework.controller.boot.BootManagement;
@@ -36,7 +36,7 @@ package org.birdbase.demo.commands
 		public var navigationModel:INavigationModel;
 		
 		[Inject]
-		public var navigator:SWFAddressNavigator;
+		public var navigator:INavigator;
 		
 		/**
 		 * The Navigator map. 

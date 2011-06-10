@@ -1,6 +1,6 @@
 package org.birdbase.demo.view
 {
-	import com.epologee.navigator.integration.swfaddress.SWFAddressNavigator;
+	import com.epologee.navigator.INavigator;
 	
 	import flash.events.Event;
 	import flash.events.MouseEvent;
@@ -18,7 +18,7 @@ package org.birdbase.demo.view
 		public var view:NavigationView;
 		
 		[Inject]
-		public var navigator:SWFAddressNavigator;
+		public var navigator:INavigator;
 		
 		public function NavigationViewMediator()
 		{
