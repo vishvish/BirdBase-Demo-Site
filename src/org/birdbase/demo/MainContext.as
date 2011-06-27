@@ -3,7 +3,7 @@ package org.birdbase.demo
 	import flash.display.Sprite;
 	
 	import logmeister.LogMeister;
-	import logmeister.connectors.TrazzleConnector;
+	import logmeister.connectors.*;
 	
 	import org.birdbase.demo.commands.StartApplication;
 	import org.birdbase.framework.BirdbaseContext;
@@ -32,7 +32,20 @@ package org.birdbase.demo
 		{
 			super.startup();
 			
+			// various logging options
+			// Trazzle
 			LogMeister.addLogger( new TrazzleConnector( this.contextView.stage, "org.birdbase.demo", true ) );
+			
+			// Monster
+			//LogMeister.addLogger( new MonsterDebuggerConnector( this.contextView.stage ) );
+			
+			// Traces
+			//LogMeister.addLogger( new FlashConnector() );
+			
+			// Firebug
+			//LogMeister.addLogger( new FirebugConnector() );
+			
+			
 			
 			info();
 			
